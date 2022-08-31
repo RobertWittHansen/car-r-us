@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@NoArgsConstructor
+@NoArgsConstructor // tom constructor
 //@JsonInclude(JsonInclude.Include.NON_NULL)
 public class MemberRequest {
   String username;
