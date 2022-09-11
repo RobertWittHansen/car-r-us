@@ -1,6 +1,5 @@
 package dat3.cars.service;
 
-
 import dat3.cars.dto.MemberRequest;
 import dat3.cars.dto.MemberResponse;
 import dat3.cars.entity.Member;
@@ -9,7 +8,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.server.ResponseStatusException;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -73,4 +71,6 @@ public class MemberService {
   public void deleteByUsername(String username) {
     memberRepository.existsById(username);
   }
+
+
 }

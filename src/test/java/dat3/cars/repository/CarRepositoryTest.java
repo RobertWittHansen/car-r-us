@@ -22,8 +22,8 @@ class CarRepositoryTest {
 
   @BeforeEach
   void setupBeforeEach(){
-    Car volvo = Car.builder().brand("Volvo").model("V70").pricePrDay(700).bestDiscount(30).build();
-    Car ww = Car.builder().brand("VW").model("Up").pricePrDay(250).bestDiscount(10).build();
+    Car volvo = Car.builder().brand("Volvo").model("V70").pricePrDay(700).bestDiscount(30).build(); //Bruger Builder Patten.
+    Car ww = Car.builder().brand("VW").model("Up").pricePrDay(250).bestDiscount(10).build(); //Bruger Builder Patten.
     carRepository.save(volvo);
     carRepository.save(ww);
   }

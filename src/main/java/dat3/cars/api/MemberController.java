@@ -48,7 +48,6 @@ public class MemberController {
   }
 
   //Security ADMIN
-
   @GetMapping
   public List<MemberResponse> getMembers(){
     return memberService.getMembers();
@@ -76,5 +75,6 @@ public class MemberController {
   public void deleteMemberByUsername(@PathVariable String username){
     memberService.deleteByUsername(username);
   }
+
 
 }

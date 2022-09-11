@@ -8,12 +8,19 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
-
-@Getter
-@Setter
-@NoArgsConstructor
+/*
+Data Transfer Object
+An object that carries data between processes in order to reduce the number of method calls.
+*/
+//---------------Lombok
+@Getter //-- Auto generer. programmet ved de er der.
+@Setter //-- Auto generer. programmet ved de er der.
+@NoArgsConstructor //-- En Constructor uden augmenter.
 @JsonInclude(JsonInclude.Include.NON_NULL)
+//---------------Lombok
+
 public class MemberResponse {
+  //---------------Fields / attributter
   String username; //Remember this is the primary key
   String email;
   String firstName;
@@ -23,11 +30,12 @@ public class MemberResponse {
   String zip;
   @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss",shape = JsonFormat.Shape.STRING)
   LocalDateTime created;
-
   @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss",shape = JsonFormat.Shape.STRING)
   LocalDateTime edited;
   Integer ranking;
+  //---------------Fields / attributter
 
+  //---------------Constructor.
   //Convert Member Entity to Member DTO
   public MemberResponse(Member m, boolean includeAll) {
     this.username = m.getUsername();
@@ -43,4 +51,5 @@ public class MemberResponse {
       this.ranking = m.getRanking();
     }
   }
+  //---------------Constructor.
 }
