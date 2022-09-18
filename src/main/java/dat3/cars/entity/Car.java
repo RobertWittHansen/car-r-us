@@ -22,7 +22,7 @@ import java.util.List;
 @Entity //Maven: Det skal ned i databasen / laver en tabel klassenavnet Car
 public class Car {
   //---------------Fields / attributter
-  @Id
+  @Id //primary key
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   int id;
   @Column(length = 50,nullable = false) //@Column's krav til databasen (det er de specific krav til kolonnen).
@@ -33,23 +33,25 @@ public class Car {
   //Best discount price (percent for pricePrDay) an admin can offer
   double bestDiscount;
 
-  @CreationTimestamp
+  @CreationTimestamp //når jeg creater smider den en timestamp ind.
   LocalDateTime created; //LocalDateTime is a final class: does not store.
 
-  @UpdateTimestamp
+  @UpdateTimestamp //(put, hvornår den sidst er updater)
   LocalDateTime edited; //LocalDateTime is a final class: does not store.
   //---------------Fields / attributter
 
   //---------------Reservation class
   @OneToMany(mappedBy = "car")
   List<Reservation> reservations = new ArrayList<>();
+
+  //TODO ??
   public void addReservation(Reservation res){
     reservations.add(res);
     res.setCar(this);
   }
   //---------------Reservation class
 
-  //---------------Constructor.
+  //---------------Constructor. Ikke nødvendigt at bruge hvid der ikke er DTO tilstede.
   public Car(String brand, String model, double pricePrDay, double bestDiscount) {
     this.brand = brand;
     this.model = model;

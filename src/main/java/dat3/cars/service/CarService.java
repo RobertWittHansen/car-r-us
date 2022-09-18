@@ -56,7 +56,7 @@ public class CarService {
 
     public void setPricePrDay(int carId, double price){
         Car car = carRepository.findById(carId).orElseThrow(()->
-                new ResponseStatusException((HttpStatus.BAD_REQUEST),"Member with this username already exist"));
+                new ResponseStatusException((HttpStatus.BAD_REQUEST),"Car with this Id docent exist"));
         car.setPricePrDay(price);
         carRepository.save(car);
     }

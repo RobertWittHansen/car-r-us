@@ -8,11 +8,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /*
+Car request object (hele classen)
 Data Transfer Object
 An object that carries data between processes in order to reduce the number of method calls.
 */
 
-//---------------Lombok
+//---------------Lombok.
 @Getter //-- Auto generer. programmet ved de er der.
 @Setter //-- Auto generer. programmet ved de er der.
 @AllArgsConstructor //-- En Constructor der tager all augmenter.
@@ -21,7 +22,7 @@ An object that carries data between processes in order to reduce the number of m
 
 // DTO class
 public class CarRequest {
-    //---------------Fields / attributter
+    //---------------Fields / attributter.
     String brand;
     String model;
     double pricePrDay;

@@ -7,7 +7,7 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-//----------------Lombok
+//----------------Lombok.
 @Getter //-- Auto generer. programmet ved de er der.
 @Setter //-- Auto generer. programmet ved de er der.
 @AllArgsConstructor //-- En Constructor der tager all augmenter.

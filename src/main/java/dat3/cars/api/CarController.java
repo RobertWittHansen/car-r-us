@@ -36,13 +36,13 @@ public class CarController {
     }
 
     //Security --> ADMIN ONLY
-    @PostMapping
+    @PostMapping //addCar
     public CarResponse addMember(@RequestBody CarRequest body){
-        return carService.addCar(body, true);
+        return carService.addCar(body, true); //returner en car
     }
 
     //Security --> Admin,
-    @PutMapping("/{carId}")
+    @PutMapping("/{carId}") //rediger objected
     public void editCar(@RequestBody CarRequest body,@PathVariable int carId){
         carService.editCar(body,carId);
     }

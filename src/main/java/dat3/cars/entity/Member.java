@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-//-----------------Lombok
+//-----------------Lombok.
 @Getter //-- Auto generer. programmet ved de er der.
 @Setter //-- Auto generer. programmet ved de er der.
 @ToString //(Default to String)
@@ -26,7 +26,7 @@ public class Member extends UserWithRoles {
   // Id is username from UserWithRoles
   //Make sure you understand why we CANNOT make any of the fields private using the inheritance strategy we are
 
-  //---------------Fields / attributter
+  //---------------Fields / attributter.
   @Column(length = 30) //I Wish could be made NOT NULL
   private String firstName;
   @Column(length = 50)
@@ -42,7 +42,7 @@ public class Member extends UserWithRoles {
   private int ranking;
   //---------------Fields / attributter
 
-  //------------------------------Reservation class
+  //------------------------------Reservation class.
   @OneToMany(mappedBy = "member")
   private List<Reservation> reservations = new ArrayList<>(); //Reservations class
   public void addReservation(Reservation res){

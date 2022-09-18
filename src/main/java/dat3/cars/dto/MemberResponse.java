@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 Data Transfer Object
 An object that carries data between processes in order to reduce the number of method calls.
 */
-//---------------Lombok
+//---------------Lombok.
 @Getter //-- Auto generer. programmet ved de er der.
 @Setter //-- Auto generer. programmet ved de er der.
 @NoArgsConstructor //-- En Constructor uden augmenter.
@@ -20,7 +20,7 @@ An object that carries data between processes in order to reduce the number of m
 //---------------Lombok
 
 public class MemberResponse {
-  //---------------Fields / attributter
+  //---------------Fields / attributter.
   String username; //Remember this is the primary key
   String email;
   String firstName;

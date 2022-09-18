@@ -16,7 +16,7 @@ Data Transfer Object
 An object that carries data between processes in order to reduce the number of method calls.
 */
 
-//---------------Lombok
+//---------------Lombok.
 @Getter //-- Auto generer. programmet ved de er der.
 @Setter //-- Auto generer. programmet ved de er der.
 @AllArgsConstructor //-- En Constructor der tager all augmenter.
@@ -25,7 +25,7 @@ An object that carries data between processes in order to reduce the number of m
 //---------------Lombok
 //Den afspejler det der skal retur
 public class CarResponse {
-    //---------------Fields / attributter
+    //---------------Fields / attributter.
     int id;
     String brand;
     String model;
@@ -38,13 +38,13 @@ public class CarResponse {
     //---------------Fields / attributter
 
     //---------------Constructor.
-    public CarResponse(Car carEntity, boolean inccludeAll){
+    public CarResponse(Car carEntity, boolean includeAll){
         this.id = carEntity.getId();
         this.brand = carEntity.getBrand();
         this.model = carEntity.getModel();
         this.pricePrDay = carEntity.getPricePrDay();
         //TODO Hvad gør denne if()
-        if(inccludeAll) {
+        if(includeAll) {
             BestDiscount = carEntity.getBestDiscount();
             this.created = carEntity.getCreated();
             this.edited = carEntity.getEdited();

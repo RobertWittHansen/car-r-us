@@ -22,7 +22,7 @@ import java.time.LocalDate;
 
 @Entity //Maven: Det skal ned i databasen / laver en tabel klassenavnet
 public class ReservationResponse {
-    //---------------Fields / attributter
+    //---------------Fields / attributter.
     @Id
     int id;
     String memberUsername;

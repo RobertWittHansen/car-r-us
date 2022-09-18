@@ -9,7 +9,7 @@ import lombok.Setter;
 Data Transfer Object
 An object that carries data between processes in order to reduce the number of method calls.
 */
-//---------------Lombok
+//---------------Lombok.
 @Getter //-- Auto generer. programmet ved de er der.
 @Setter //-- Auto generer. programmet ved de er der.
 @NoArgsConstructor //-- En Constructor uden augmenter.
@@ -17,7 +17,7 @@ An object that carries data between processes in order to reduce the number of m
 //---------------Lombok
 
 public class MemberRequest {
-  //---------------Fields / attributter
+  //---------------Fields / attributter.
   String username;
   String email;
   String password;

@@ -6,14 +6,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-//----------------Lombok
+//----------------Lombok.
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 //----------------Lombok
+
 public class ReservationRequest {
-    //---------------Fields / attributter
+    //---------------Fields / attributter.
     String userName;
     int carId;
     String Data;
